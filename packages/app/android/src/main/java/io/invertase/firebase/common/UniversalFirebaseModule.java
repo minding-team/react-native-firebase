@@ -46,11 +46,7 @@ public class UniversalFirebaseModule {
   }
 
   protected ExecutorService getExecutor() {
-    ExecutorService existingSingleThreadExecutor = executors.get(getName());
-    if (existingSingleThreadExecutor != null) return existingSingleThreadExecutor;
-    ExecutorService newSingleThreadExecutor = Executors.newSingleThreadExecutor();
-    executors.put(getName(), newSingleThreadExecutor);
-    return newSingleThreadExecutor;
+    return Executors.newCachedThreadPool();
   }
 
   public String getName() {
