@@ -1,6 +1,6 @@
 {
   "name": "@minding/react-native-firebase-dynamic-links",
-  "version": "10.8.1-patch.3",
+  "version": "10.8.1-patch.4",
   "author": "Invertase <oss@invertase.io> (http://invertase.io)",
   "description": "React Native Firebase - Dynamic Links",
   "main": "lib/index.js",
@@ -23,7 +23,7 @@
     "dynamic link"
   ],
   "peerDependencies": {
-    "@minding/react-native-firebase-app": "10.8.1-patch.3"
+    "@minding/react-native-firebase-app": "10.8.1-patch.4"
   },
   "publishConfig": {
     "access": "public"

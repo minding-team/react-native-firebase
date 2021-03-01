@@ -1,6 +1,6 @@
 require 'json'
 package = JSON.parse(File.read(File.join(__dir__, 'package.json')))
-appPackage = JSON.parse(File.read(File.join('..', 'app', 'package.json')))
+appPackage = JSON.parse(File.read(File.join('..', 'react-native-firebase-app', 'package.json')))
 
 # Firebase SDK Override
 coreVersionDetected = appPackage['version']
