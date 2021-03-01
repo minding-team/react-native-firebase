@@ -1,7 +1,7 @@
-import firebase from '@react-native-firebase/app';
-import * as firestore from '@react-native-firebase/firestore';
+import firebase from '@minding/react-native-firebase-app';
+import * as firestore from '@minding/react-native-firebase-firestore';
 // tslint:disable-next-line:no-duplicate-imports
-import firestoreExport from '@react-native-firebase/firestore';
+import firestoreExport from '@minding/react-native-firebase-firestore';
 
 console.log(firestoreExport().collection);
 

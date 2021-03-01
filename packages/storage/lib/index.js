@@ -15,12 +15,12 @@
  *
  */
 
-import { isNumber, isString } from '@react-native-firebase/app/lib/common';
+import { isNumber, isString } from '@minding/react-native-firebase-app/lib/common';
 import {
   createModuleNamespace,
   FirebaseModule,
   getFirebaseRoot,
-} from '@react-native-firebase/app/lib/internal';
+} from '@minding/react-native-firebase-app/lib/internal';
 import StorageReference from './StorageReference';
 import StorageStatics from './StorageStatics';
 import { getGsUrlParts, getHttpUrlParts, handleStorageEvent } from './utils';
@@ -153,13 +153,13 @@ class FirebaseStorageModule extends FirebaseModule {
   }
 }
 
-// import { SDK_VERSION } from '@react-native-firebase/storage';
+// import { SDK_VERSION } from '@minding/react-native-firebase-storage';
 export const SDK_VERSION = version;
 
-// import { STATICS } from '@react-native-firebase/storage';
+// import { STATICS } from '@minding/react-native-firebase-storage';
 export const STATICS = StorageStatics;
 
-// import storage from '@react-native-firebase/storage';
+// import storage from '@minding/react-native-firebase-storage';
 // storage().X(...);
 export default createModuleNamespace({
   statics: StorageStatics,
@@ -173,7 +173,7 @@ export default createModuleNamespace({
   ModuleClass: FirebaseStorageModule,
 });
 
-// import storage, { firebase } from '@react-native-firebase/storage';
+// import storage, { firebase } from '@minding/react-native-firebase-storage';
 // storage().X(...);
 // firebase.storage().X(...);
 export const firebase = getFirebaseRoot();

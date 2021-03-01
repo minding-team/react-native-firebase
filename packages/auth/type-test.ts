@@ -1,5 +1,5 @@
-import firebase from '@react-native-firebase/app';
-import * as auth from '@react-native-firebase/auth';
+import firebase from '@minding/react-native-firebase-app';
+import * as auth from '@minding/react-native-firebase-auth';
 
 console.log(auth.default().currentUser);
 

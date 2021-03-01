@@ -15,7 +15,7 @@
  *
  */
 
-import { ReactNativeFirebase } from '@react-native-firebase/app';
+import { ReactNativeFirebase } from '@minding/react-native-firebase-app';
 
 /**
  * Firebase Remote RemoteConfig package for React Native.
@@ -25,7 +25,7 @@ import { ReactNativeFirebase } from '@react-native-firebase/app';
  * Access the firebase export from the `config` package:
  *
  * ```js
- * import { firebase } from '@react-native-firebase/remote-config';
+ * import { firebase } from '@minding/react-native-firebase-remote-config';
  *
  * // firebase.remoteConfig().X
  * ```
@@ -35,7 +35,7 @@ import { ReactNativeFirebase } from '@react-native-firebase/app';
  * Using the default export from the `config` package:
  *
  * ```js
- * import remoteConfig from '@react-native-firebase/remote-config';
+ * import remoteConfig from '@minding/react-native-firebase-remote-config';
  *
  * // remoteConfig().X
  * ```
@@ -45,7 +45,7 @@ import { ReactNativeFirebase } from '@react-native-firebase/app';
  * Using the default export from the `app` package:
  *
  * ```js
- * import firebase from '@react-native-firebase/app';
+ * import firebase from '@minding/react-native-firebase-app';
  * import '@react-native-firebase/remote-config';
  *
  * // firebase.remoteConfig().X
@@ -534,7 +534,7 @@ export default defaultExport;
 /**
  * Attach namespace to `firebase.` and `FirebaseApp.`.
  */
-declare module '@react-native-firebase/app' {
+declare module '@minding/react-native-firebase-app' {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   namespace ReactNativeFirebase {
     import FirebaseModuleWithStatics = ReactNativeFirebase.FirebaseModuleWithStatics;

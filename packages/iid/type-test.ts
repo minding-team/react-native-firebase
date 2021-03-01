@@ -1,7 +1,7 @@
-import firebase from '@react-native-firebase/app';
-import * as iid from '@react-native-firebase/iid';
+import firebase from '@minding/react-native-firebase-app';
+import * as iid from '@minding/react-native-firebase-iid';
 // tslint:disable-next-line:no-duplicate-imports
-import iidExport from '@react-native-firebase/iid';
+import iidExport from '@minding/react-native-firebase-iid';
 
 console.log(iidExport().app);
 

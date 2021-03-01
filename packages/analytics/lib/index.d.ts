@@ -15,7 +15,7 @@
  *
  */
 
-import { ReactNativeFirebase } from '@react-native-firebase/app';
+import { ReactNativeFirebase } from '@minding/react-native-firebase-app';
 
 /**
  * Firebase Analytics package for React Native.
@@ -23,7 +23,7 @@ import { ReactNativeFirebase } from '@react-native-firebase/app';
  * #### Example: Access the firebase export from the `analytics` package:
  *
  * ```js
- * import { firebase } from '@react-native-firebase/analytics';
+ * import { firebase } from '@minding/react-native-firebase-analytics';
  *
  * // firebase.analytics().X
  * ```
@@ -31,7 +31,7 @@ import { ReactNativeFirebase } from '@react-native-firebase/app';
  * #### Example: Using the default export from the `analytics` package:
  *
  * ```js
- * import analytics from '@react-native-firebase/analytics';
+ * import analytics from '@minding/react-native-firebase-analytics';
  *
  * // analytics().X
  * ```
@@ -39,7 +39,7 @@ import { ReactNativeFirebase } from '@react-native-firebase/app';
  * #### Example: Using the default export from the `app` package:
  *
  * ```js
- * import firebase from '@react-native-firebase/app';
+ * import firebase from '@minding/react-native-firebase-app';
  * import '@react-native-firebase/analytics';
  *
  * // firebase.analytics().X
@@ -1469,7 +1469,7 @@ export default defaultExport;
 /**
  * Attach namespace to `firebase.` and `FirebaseApp.`.
  */
-declare module '@react-native-firebase/app' {
+declare module '@minding/react-native-firebase-app' {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   namespace ReactNativeFirebase {
     import FirebaseModuleWithStatics = ReactNativeFirebase.FirebaseModuleWithStatics;

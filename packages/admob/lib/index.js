@@ -19,7 +19,7 @@ import {
   createModuleNamespace,
   FirebaseModule,
   getFirebaseRoot,
-} from '@react-native-firebase/app/lib/internal';
+} from '@minding/react-native-firebase-app/lib/internal';
 import AdEventType from './AdEventType';
 import AdsConsentDebugGeography from './AdsConsentDebugGeography';
 import AdsConsentStatus from './AdsConsentStatus';
@@ -73,7 +73,7 @@ class FirebaseAdMobModule extends FirebaseModule {
   }
 }
 
-// import { SDK_VERSION } from '@react-native-firebase/admob';
+// import { SDK_VERSION } from '@minding/react-native-firebase-admob';
 export const SDK_VERSION = version;
 
 export default createModuleNamespace({

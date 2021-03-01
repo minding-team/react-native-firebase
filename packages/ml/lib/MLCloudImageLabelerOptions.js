@@ -22,7 +22,7 @@ import {
   isObject,
   isString,
   isUndefined,
-} from '@react-native-firebase/app/lib/common';
+} from '@minding/react-native-firebase-app/lib/common';
 
 export default function MLCloudImageLabelerOptions(cloudImageLabelerOptions) {
   const out = {

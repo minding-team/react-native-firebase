@@ -21,10 +21,10 @@ plugins {
 }
 
 def appProject
-if (findProject(':@react-native-firebase_app')) {
-  appProject = project(':@react-native-firebase_app')
-} else if (findProject(':react-native-firebase_app')) {
-  appProject = project(':react-native-firebase_app')
+if (findProject(':@minding_react-native-firebase-app')) {
+  appProject = project(':@minding_react-native-firebase-app')
+} else if (findProject(':minding_react-native-firebase-app')) {
+  appProject = project(':minding_react-native-firebase-app')
 } else {
   throw new GradleException('Could not find the react-native-firebase/app package, have you installed it?')
 }
@@ -67,7 +67,7 @@ project.ext {
   ])
 }
 
-apply from: file("./../../app/android/firebase-json.gradle")
+apply from: file("./../../react-native-firebase-app/android/firebase-json.gradle")
 
 def firebaseJSONAdmobAppIDString = ""
 def firebaseJSONAdmobDelayAppMeasurementInitBool = false

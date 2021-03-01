@@ -25,7 +25,7 @@ import {
   isObject,
   isString,
   isUndefined,
-} from '@react-native-firebase/app/lib/common';
+} from '@minding/react-native-firebase-app/lib/common';
 import FirestoreBlob from '../FirestoreBlob';
 import { DOCUMENT_ID } from '../FirestoreFieldPath';
 import FirestoreGeoPoint from '../FirestoreGeoPoint';

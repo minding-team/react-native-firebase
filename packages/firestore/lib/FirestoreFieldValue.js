@@ -15,7 +15,7 @@
  *
  */
 
-import { isArray, isNumber } from '@react-native-firebase/app/lib/common';
+import { isArray, isNumber } from '@minding/react-native-firebase-app/lib/common';
 import { buildNativeArray, provideFieldValueClass } from './utils/serialize';
 
 export const TypeFieldValueDelete = 'delete';

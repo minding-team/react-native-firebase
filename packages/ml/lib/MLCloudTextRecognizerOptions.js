@@ -22,7 +22,7 @@ import {
   isObject,
   isString,
   isUndefined,
-} from '@react-native-firebase/app/lib/common';
+} from '@minding/react-native-firebase-app/lib/common';
 import MLCloudTextRecognizerModelType from './MLCloudTextRecognizerModelType';
 
 export default function MLCloudTextRecognizerOptions(cloudTextRecognizerOptions) {

@@ -15,7 +15,7 @@
  *
  */
 
-import NativeError from '@react-native-firebase/app/lib/internal/NativeFirebaseError';
+import NativeError from '@minding/react-native-firebase-app/lib/internal/NativeFirebaseError';
 import AdEventType from '../AdEventType';
 import RewardedAdEventType from '../RewardedAdEventType';
 

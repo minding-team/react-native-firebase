@@ -15,7 +15,7 @@
  *
  */
 
-import { ReactNativeFirebase } from '@react-native-firebase/app';
+import { ReactNativeFirebase } from '@minding/react-native-firebase-app';
 
 /**
  * Firebase Database package for React Native.
@@ -25,7 +25,7 @@ import { ReactNativeFirebase } from '@react-native-firebase/app';
  * Access the firebase export from the `database` package:
  *
  * ```js
- * import { firebase } from '@react-native-firebase/database';
+ * import { firebase } from '@minding/react-native-firebase-database';
  *
  * // firebase.database().X
  * ```
@@ -35,7 +35,7 @@ import { ReactNativeFirebase } from '@react-native-firebase/app';
  * Using the default export from the `database` package:
  *
  * ```js
- * import database from '@react-native-firebase/database';
+ * import database from '@minding/react-native-firebase-database';
  *
  * // database().X
  * ```
@@ -45,7 +45,7 @@ import { ReactNativeFirebase } from '@react-native-firebase/app';
  * Using the default export from the `app` package:
  *
  * ```js
- * import firebase from '@react-native-firebase/app';
+ * import firebase from '@minding/react-native-firebase-app';
  * import '@react-native-firebase/database';
  *
  * // firebase.database().X
@@ -1279,7 +1279,7 @@ export default defaultExport;
 /**
  * Attach namespace to `firebase.` and `FirebaseApp.`.
  */
-declare module '@react-native-firebase/app' {
+declare module '@minding/react-native-firebase-app' {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   namespace ReactNativeFirebase {
     import FirebaseModuleWithStaticsAndApp = ReactNativeFirebase.FirebaseModuleWithStaticsAndApp;

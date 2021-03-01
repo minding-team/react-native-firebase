@@ -15,12 +15,12 @@
  *
  */
 
-import { isString, toFilePath } from '@react-native-firebase/app/lib/common';
+import { isString, toFilePath } from '@minding/react-native-firebase-app/lib/common';
 import {
   createModuleNamespace,
   FirebaseModule,
   getFirebaseRoot,
-} from '@react-native-firebase/app/lib/internal';
+} from '@minding/react-native-firebase-app/lib/internal';
 import version from './version';
 import MLCloudDocumentTextRecognizerOptions from './MLCloudDocumentTextRecognizerOptions';
 import MLCloudImageLabelerOptions from './MLCloudImageLabelerOptions';
@@ -117,10 +117,10 @@ class FirebaseMLModule extends FirebaseModule {
   }
 }
 
-// import { SDK_VERSION } from '@react-native-firebase/ml';
+// import { SDK_VERSION } from '@minding/react-native-firebase-ml';
 export const SDK_VERSION = version;
 
-// import ML from '@react-native-firebase/ml';
+// import ML from '@minding/react-native-firebase-ml';
 // ml().X(...);
 export default createModuleNamespace({
   statics,
@@ -133,13 +133,13 @@ export default createModuleNamespace({
   ModuleClass: FirebaseMLModule,
 });
 
-// import ml, { firebase } from '@react-native-firebase/ml';
+// import ml, { firebase } from '@minding/react-native-firebase-ml';
 // ml().X(...);
 // firebase.ml().X(...);
 export const firebase = getFirebaseRoot();
 
 // e.g.
-// // import { MLCloudTextRecognizerModelType } from '@react-native-firebase/ml';
+// // import { MLCloudTextRecognizerModelType } from '@minding/react-native-firebase-ml';
 export { default as MLCloudTextRecognizerModelType } from './MLCloudTextRecognizerModelType';
 export { default as MLDocumentTextRecognizedBreakType } from './MLDocumentTextRecognizedBreakType';
 export { default as MLCloudLandmarkRecognizerModelType } from './MLCloudLandmarkRecognizerModelType';

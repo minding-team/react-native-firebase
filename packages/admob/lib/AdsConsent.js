@@ -23,7 +23,7 @@ import {
   isString,
   isUndefined,
   isValidUrl,
-} from '@react-native-firebase/app/lib/common';
+} from '@minding/react-native-firebase-app/lib/common';
 import { NativeModules } from 'react-native';
 import AdsConsentDebugGeography from './AdsConsentDebugGeography';
 import AdsConsentStatus from './AdsConsentStatus';

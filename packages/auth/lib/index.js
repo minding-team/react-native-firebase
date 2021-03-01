@@ -21,12 +21,12 @@ import {
   isString,
   isNull,
   isValidUrl,
-} from '@react-native-firebase/app/lib/common';
+} from '@minding/react-native-firebase-app/lib/common';
 import {
   createModuleNamespace,
   FirebaseModule,
   getFirebaseRoot,
-} from '@react-native-firebase/app/lib/internal';
+} from '@minding/react-native-firebase-app/lib/internal';
 import ConfirmationResult from './ConfirmationResult';
 import PhoneAuthListener from './PhoneAuthListener';
 import EmailAuthProvider from './providers/EmailAuthProvider';
@@ -377,10 +377,10 @@ class FirebaseAuthModule extends FirebaseModule {
   }
 }
 
-// import { SDK_VERSION } from '@react-native-firebase/auth';
+// import { SDK_VERSION } from '@minding/react-native-firebase-auth';
 export const SDK_VERSION = version;
 
-// import auth from '@react-native-firebase/auth';
+// import auth from '@minding/react-native-firebase-auth';
 // auth().X(...);
 export default createModuleNamespace({
   statics,
@@ -393,7 +393,7 @@ export default createModuleNamespace({
   ModuleClass: FirebaseAuthModule,
 });
 
-// import auth, { firebase } from '@react-native-firebase/auth';
+// import auth, { firebase } from '@minding/react-native-firebase-auth';
 // auth().X(...);
 // firebase.auth().X(...);
 export const firebase = getFirebaseRoot();

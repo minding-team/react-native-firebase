@@ -15,12 +15,12 @@
  *
  */
 
-import { isBoolean, isString } from '@react-native-firebase/app/lib/common';
+import { isBoolean, isString } from '@minding/react-native-firebase-app/lib/common';
 import {
   createModuleNamespace,
   FirebaseModule,
   getFirebaseRoot,
-} from '@react-native-firebase/app/lib/internal';
+} from '@minding/react-native-firebase-app/lib/internal';
 import version from './version';
 
 const statics = {};
@@ -74,10 +74,10 @@ class FirebaseFiamModule extends FirebaseModule {
   }
 }
 
-// import { SDK_VERSION } from '@react-native-firebase/in-app-messaging';
+// import { SDK_VERSION } from '@minding/react-native-firebase-in-app-messaging';
 export const SDK_VERSION = version;
 
-// import inAppMessaging from '@react-native-firebase/in-app-messaging';
+// import inAppMessaging from '@minding/react-native-firebase-in-app-messaging';
 // inAppMessaging().X(...);
 export default createModuleNamespace({
   statics,
@@ -90,7 +90,7 @@ export default createModuleNamespace({
   ModuleClass: FirebaseFiamModule,
 });
 
-// import inAppMessaging, { firebase } from '@react-native-firebase/in-app-messaging';
+// import inAppMessaging, { firebase } from '@minding/react-native-firebase-in-app-messaging';
 // inAppMessaging().X(...);
 // firebase.inAppMessaging().X(...);
 export const firebase = getFirebaseRoot();

@@ -15,7 +15,7 @@
  *
  */
 
-import { isString } from '@react-native-firebase/app/lib/common';
+import { isString } from '@minding/react-native-firebase-app/lib/common';
 import FirestoreDocumentReference, {
   provideDocumentSnapshotClass,
 } from './FirestoreDocumentReference';

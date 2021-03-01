@@ -23,7 +23,7 @@
  * Access the default firebase app from the `app` package:
  *
  * ```js
- * import firebase from '@react-native-firebase/app';
+ * import firebase from '@minding/react-native-firebase-app';
  *
  * console.log(firebase.app().name);
  * ```

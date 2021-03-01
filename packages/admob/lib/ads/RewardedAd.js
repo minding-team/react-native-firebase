@@ -15,8 +15,8 @@
  *
  */
 
-import { isFunction, isString } from '@react-native-firebase/app/lib/common';
-import { getFirebaseRoot } from '@react-native-firebase/app/lib/internal';
+import { isFunction, isString } from '@minding/react-native-firebase-app/lib/common';
+import { getFirebaseRoot } from '@minding/react-native-firebase-app/lib/internal';
 import validateAdRequestOptions from '../validateAdRequestOptions';
 import validateAdShowOptions from '../validateAdShowOptions';
 import MobileAd from './MobileAd';

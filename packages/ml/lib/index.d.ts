@@ -15,7 +15,7 @@
  *
  */
 
-import { ReactNativeFirebase } from '@react-native-firebase/app';
+import { ReactNativeFirebase } from '@minding/react-native-firebase-app';
 /**
  * Firebase ML package for React Native.
  *
@@ -24,7 +24,7 @@ import { ReactNativeFirebase } from '@react-native-firebase/app';
  * Access the firebase export from the `ml` package:
  *
  * ```js
- * import { firebase } from '@react-native-firebase/ml';
+ * import { firebase } from '@minding/react-native-firebase-ml';
  *
  * // firebase.ml().X
  * ```
@@ -34,7 +34,7 @@ import { ReactNativeFirebase } from '@react-native-firebase/app';
  * Using the default export from the `ml` package:
  *
  * ```js
- * import ml from '@react-native-firebase/ml';
+ * import ml from '@minding/react-native-firebase-ml';
  *
  * // ml().X
  * ```
@@ -44,7 +44,7 @@ import { ReactNativeFirebase } from '@react-native-firebase/app';
  * Using the default export from the `app` package:
  *
  * ```js
- * import firebase from '@react-native-firebase/app';
+ * import firebase from '@minding/react-native-firebase-app';
  * import '@react-native-firebase/ml';
  *
  * // firebase.ml().X
@@ -197,7 +197,7 @@ export namespace FirebaseMLTypes {
      * import {
      *   firebase,
      *   MLCloudTextRecognizerModelType,
-     * } from '@react-native-firebase/ml';
+     * } from '@minding/react-native-firebase-ml';
      *
      * await firebase.ml().cloudTextRecognizerProcessImage(filePath, {
      *   modelType: MLCloudTextRecognizerModelType.DENSE_MODEL,
@@ -687,7 +687,7 @@ export default defaultExport;
 /**
  * Attach namespace to `firebase.` and `FirebaseApp.`.
  */
-declare module '@react-native-firebase/app' {
+declare module '@minding/react-native-firebase-app' {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   namespace ReactNativeFirebase {
     import FirebaseModuleWithStaticsAndApp = ReactNativeFirebase.FirebaseModuleWithStaticsAndApp;

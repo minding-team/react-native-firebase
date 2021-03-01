@@ -77,7 +77,7 @@ class FirebaseUtilsModule extends FirebaseModule {
   }
 }
 
-// import { utils } from '@react-native-firebase/app';
+// import { utils } from '@minding/react-native-firebase-app';
 // utils().X(...);
 export default createModuleNamespace({
   statics,

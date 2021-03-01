@@ -22,13 +22,13 @@ import {
   isString,
   isUndefined,
   isIOS,
-} from '@react-native-firebase/app/lib/common';
+} from '@minding/react-native-firebase-app/lib/common';
 import Value from './RemoteConfigValue';
 import {
   createModuleNamespace,
   FirebaseModule,
   getFirebaseRoot,
-} from '@react-native-firebase/app/lib/internal';
+} from '@minding/react-native-firebase-app/lib/internal';
 import version from './version';
 
 const statics = {
@@ -236,10 +236,10 @@ class FirebaseConfigModule extends FirebaseModule {
   }
 }
 
-// import { SDK_VERSION } from '@react-native-firebase/remote-config';
+// import { SDK_VERSION } from '@minding/react-native-firebase-remote-config';
 export const SDK_VERSION = version;
 
-// import config from '@react-native-firebase/remote-config';
+// import config from '@minding/react-native-firebase-remote-config';
 // config().X(...);
 export default createModuleNamespace({
   statics,
@@ -252,7 +252,7 @@ export default createModuleNamespace({
   ModuleClass: FirebaseConfigModule,
 });
 
-// import config, { firebase } from '@react-native-firebase/remote-config';
+// import config, { firebase } from '@minding/react-native-firebase-remote-config';
 // config().X(...);
 // firebase.remoteConfig().X(...);
 export const firebase = getFirebaseRoot();

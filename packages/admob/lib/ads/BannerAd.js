@@ -18,8 +18,8 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { requireNativeComponent } from 'react-native';
-import { isFunction } from '@react-native-firebase/app/lib/common';
-import NativeFirebaseError from '@react-native-firebase/app/lib/internal/NativeFirebaseError';
+import { isFunction } from '@minding/react-native-firebase-app/lib/common';
+import NativeFirebaseError from '@minding/react-native-firebase-app/lib/internal/NativeFirebaseError';
 import BannerAdSize from '../BannerAdSize';
 import validateAdRequestOptions from '../validateAdRequestOptions';
 

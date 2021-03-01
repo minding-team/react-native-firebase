@@ -15,7 +15,7 @@
  *
  */
 
-import { isAndroid, isIOS } from '@react-native-firebase/app/lib/common';
+import { isAndroid, isIOS } from '@minding/react-native-firebase-app/lib/common';
 
 export default class Settings {
   constructor(auth) {

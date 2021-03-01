@@ -1,5 +1,5 @@
-import firebase from '@react-native-firebase/app';
-import * as perf from '@react-native-firebase/perf';
+import firebase from '@minding/react-native-firebase-app';
+import * as perf from '@minding/react-native-firebase-perf';
 
 console.log(perf.default().app);
 

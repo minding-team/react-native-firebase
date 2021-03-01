@@ -28,7 +28,7 @@ import {
   pathChild,
   pathParent,
   promiseWithOptionalCallback,
-} from '@react-native-firebase/app/lib/common';
+} from '@minding/react-native-firebase-app/lib/common';
 import DatabaseDataSnapshot from './DatabaseDataSnapshot';
 import DatabaseOnDisconnect from './DatabaseOnDisconnect';
 import DatabaseQuery, {

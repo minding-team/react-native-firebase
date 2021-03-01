@@ -21,8 +21,8 @@ import {
   isObject,
   isString,
   isUndefined,
-} from '@react-native-firebase/app/lib/common';
-import NativeError from '@react-native-firebase/app/lib/internal/NativeFirebaseError';
+} from '@minding/react-native-firebase-app/lib/common';
+import NativeError from '@minding/react-native-firebase-app/lib/internal/NativeFirebaseError';
 import FirestoreDocumentSnapshot from './FirestoreDocumentSnapshot';
 import FirestoreFieldPath, { fromDotSeparatedString } from './FirestoreFieldPath';
 import FirestoreQuerySnapshot from './FirestoreQuerySnapshot';

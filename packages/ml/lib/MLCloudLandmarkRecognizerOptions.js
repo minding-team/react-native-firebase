@@ -22,7 +22,7 @@ import {
   isObject,
   isString,
   isUndefined,
-} from '@react-native-firebase/app/lib/common';
+} from '@minding/react-native-firebase-app/lib/common';
 import MLCloudLandmarkRecognizerModelType from './MLCloudLandmarkRecognizerModelType';
 
 export default function MLCloudLandmarkRecognizerOptions(cloudLandmarkRecognizerOptions) {

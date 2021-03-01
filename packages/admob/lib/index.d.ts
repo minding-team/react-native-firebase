@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  */
-import { ReactNativeFirebase } from '@react-native-firebase/app';
+import { ReactNativeFirebase } from '@minding/react-native-firebase-app';
 import * as React from 'react';
 
 /**
@@ -23,7 +23,7 @@ import * as React from 'react';
  * #### Example: access the Firebase export from the `admob` package:
  *
  * ```jS
- * import { firebase } from '@react-native-firebase/admob';
+ * import { firebase } from '@minding/react-native-firebase-admob';
  *
  * // firebase.admob().X
  * ```
@@ -31,7 +31,7 @@ import * as React from 'react';
  * #### Example: Using the default export from the `admob` package:
  *
  * ```js
- * import admob from '@react-native-firebase/admob';
+ * import admob from '@minding/react-native-firebase-admob';
  *
  * // admob().X
  * ```
@@ -39,7 +39,7 @@ import * as React from 'react';
  * #### Example: Using the default export from the `app` package:
  *
  * ```js
- * import firebase from '@react-native-firebase/app';
+ * import firebase from '@minding/react-native-firebase-app';
  * import '@react-native-firebase/admob';
  *
  * // firebase.admob().X
@@ -100,7 +100,7 @@ export namespace FirebaseAdMobTypes {
      * #### Example
      *
      * ```js
-     * import { AdEventType } from '@react-native-firebase/admob';
+     * import { AdEventType } from '@minding/react-native-firebase-admob';
      *
      * advert.onAdEvent((type,error,data) => {
      *   if (type === AdEventType.LOADED) {
@@ -117,7 +117,7 @@ export namespace FirebaseAdMobTypes {
      * #### Example
      *
      * ```js
-     * import { AdEventType } from '@react-native-firebase/admob';
+     * import { AdEventType } from '@minding/react-native-firebase-admob';
      *
      * advert.onAdEvent((type, error, data) => {
      *   if (type === AdEventType.ERROR) {
@@ -168,7 +168,7 @@ export namespace FirebaseAdMobTypes {
      * #### Example
      *
      * ```js
-     * import { RewardedAdEventType } from '@react-native-firebase/admob';
+     * import { RewardedAdEventType } from '@minding/react-native-firebase-admob';
      *
      * rewardedAd.onAdEvent((type, error, data) => {
      *   if (type === RewardedAdEventType.LOADED) {
@@ -190,7 +190,7 @@ export namespace FirebaseAdMobTypes {
      * #### Example
      *
      * ```js
-     * import { RewardedAdEventType } from '@react-native-firebase/admob';
+     * import { RewardedAdEventType } from '@minding/react-native-firebase-admob';
      *
      * rewardedAd.onAdEvent((type, error, data) => {
      *   if (type === RewardedAdEventType.EARNED_REWARD) {
@@ -296,7 +296,7 @@ export namespace FirebaseAdMobTypes {
      * #### Example
      *
      * ```js
-     * import { AdsConsent } from '@react-native-firebase/admob';
+     * import { AdsConsent } from '@minding/react-native-firebase-admob';
      *
      * const consent = await AdsConsent.requestInfoUpdate(['pub-6189033257628554']);
      * console.log('User location within EEA or Unknown:', consent.isRequestLocationInEeaOrUnknown);
@@ -332,7 +332,7 @@ export namespace FirebaseAdMobTypes {
      * #### Example
      *
      * ```js
-     * import { AdsConsent, AdsConsentStatus } from '@react-native-firebase/admob';
+     * import { AdsConsent, AdsConsentStatus } from '@minding/react-native-firebase-admob';
      *
      * async function requestConsent() {
      *   const consent = await AdsConsent.requestInfoUpdate(['pub-6189033257628554']);
@@ -368,7 +368,7 @@ export namespace FirebaseAdMobTypes {
      * #### Example
      *
      * ```js
-     * import { AdsConsent } from '@react-native-firebase/admob';
+     * import { AdsConsent } from '@minding/react-native-firebase-admob';
      *
      * const providers = await AdsConsent.getAdProviders();
      * ```
@@ -387,7 +387,7 @@ export namespace FirebaseAdMobTypes {
      * #### Example
      *
      * ```js
-     * import { AdsConsent, AdsConsentDebugGeography } from '@react-native-firebase/admob';
+     * import { AdsConsent, AdsConsentDebugGeography } from '@minding/react-native-firebase-admob';
      *
      * // Set disabled
      * await AdsConsentDebugGeography.setDebugGeography(AdsConsentDebugGeography.DISABLED);
@@ -419,7 +419,7 @@ export namespace FirebaseAdMobTypes {
      * #### Example
      *
      * ```js
-     * import { AdsConsent, AdsConsentStatus } from '@react-native-firebase/admob';
+     * import { AdsConsent, AdsConsentStatus } from '@minding/react-native-firebase-admob';
      *
      * // User accepted personalized ads
      * await AdsConsent.setStatus(AdsConsentStatus.PERSONALIZED);
@@ -442,7 +442,7 @@ export namespace FirebaseAdMobTypes {
      * #### Example
      *
      * ```js
-     * import { AdsConsent } from '@react-native-firebase/admob';
+     * import { AdsConsent } from '@minding/react-native-firebase-admob';
      *
      * const status = await AdsConsent.getStatus();
      * ```
@@ -466,7 +466,7 @@ export namespace FirebaseAdMobTypes {
      * #### Example
      *
      * ```js
-     * import { AdsConsent } from '@react-native-firebase/admob';
+     * import { AdsConsent } from '@minding/react-native-firebase-admob';
      *
      * // User is under age of consent
      * await AdsConsent.setTagForUnderAgeOfConsent(true);
@@ -944,7 +944,7 @@ export namespace FirebaseAdMobTypes {
    * request options. The example below will present a test advert, and only request a non-personalized ad.
    *
    * ```js
-   * import { InterstitialAd, TestIds } from '@react-native-firebase/admob';
+   * import { InterstitialAd, TestIds } from '@minding/react-native-firebase-admob';
    *
    * const interstitial = InterstitialAd.createForAdRequest(TestIds.INTERSTITIAL, {
    *     requestNonPersonalizedAdsOnly: true,
@@ -958,7 +958,7 @@ export namespace FirebaseAdMobTypes {
    * Event types match the `AdEventType` interface. Once the advert has loaded, we can trigger it to show:
    *
    * ```js
-   * import { AdEventType } from '@react-native-firebase/admob';
+   * import { AdEventType } from '@minding/react-native-firebase-admob';
    *
    * interstitial.onAdEvent((type) => {
    *   if (type === AdEventType.LOADED) {
@@ -979,7 +979,7 @@ export namespace FirebaseAdMobTypes {
      * #### Example
      *
      * ```js
-     * import { InterstitialAd, AdEventType, TestIds } from '@react-native-firebase/admob';
+     * import { InterstitialAd, AdEventType, TestIds } from '@minding/react-native-firebase-admob';
      *
      * const interstitialAd = await InterstitialAd.request(TestIds.INTERSTITIAL, {
      *   requestAgent: 'CoolAds',
@@ -1017,7 +1017,7 @@ export namespace FirebaseAdMobTypes {
    * request options. The example below will present a test advert, and only request a non-personalized ad.
    *
    * ```js
-   * import { RewardedAd, TestIds } from '@react-native-firebase/admob';
+   * import { RewardedAd, TestIds } from '@minding/react-native-firebase-admob';
    *
    * const rewarded = RewardedAd.createForAdRequest(TestIds.REWARDED, {
    *     requestNonPersonalizedAdsOnly: true,
@@ -1032,7 +1032,7 @@ export namespace FirebaseAdMobTypes {
    * adverts are passed back to the event handler on advert load and when the user earns the reward.
    *
    * ```js
-   * import { RewardedAdEventType } from '@react-native-firebase/admob';
+   * import { RewardedAdEventType } from '@minding/react-native-firebase-admob';
    *
    * rewarded.onAdEvent((type, error, reward) => {
    *   if (type === RewardedAdEventType.LOADED) {
@@ -1056,7 +1056,7 @@ export namespace FirebaseAdMobTypes {
      * #### Example
      *
      * ```js
-     * import { RewardedAd, RewardedAdEventType, TestIds } from '@react-native-firebase/admob';
+     * import { RewardedAd, RewardedAdEventType, TestIds } from '@minding/react-native-firebase-admob';
      *
      * const rewardedAd = await RewardedAd.request(TestIds.REWARDED, {
      *   requestAgent: 'CoolAds',
@@ -1090,7 +1090,7 @@ export namespace FirebaseAdMobTypes {
    * such as positioning.
    *
    * ```js
-   * import { BannerAd, BannerAdSize, TestIds } from '@react-native-firebase/admob';
+   * import { BannerAd, BannerAdSize, TestIds } from '@minding/react-native-firebase-admob';
    *
    * function HomeScreen() {
    *   return (
@@ -1175,7 +1175,7 @@ export namespace FirebaseAdMobTypes {
      * #### Example
      *
      * ```js
-     * import admob, { MaxAdContentRating } from '@react-native-firebase/admob';
+     * import admob, { MaxAdContentRating } from '@minding/react-native-firebase-admob';
      *
      * await admob().setRequestConfiguration({
      *   // Update all future requests suitable for parental guidance
@@ -1216,7 +1216,7 @@ export default defaultExport;
 /**
  * Attach namespace to `firebase.` and `FirebaseApp.`.
  */
-declare module '@react-native-firebase/app' {
+declare module '@minding/react-native-firebase-app' {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   namespace ReactNativeFirebase {
     import FirebaseModuleWithStaticsAndApp = ReactNativeFirebase.FirebaseModuleWithStaticsAndApp;

@@ -1,5 +1,5 @@
-import firebase from '@react-native-firebase/app';
-import * as config from '@react-native-firebase/remote-config';
+import firebase from '@minding/react-native-firebase-app';
+import * as config from '@minding/react-native-firebase-remote-config';
 
 console.log(config.default().app);
 

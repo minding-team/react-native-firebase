@@ -15,7 +15,7 @@
  *
  */
 
-import { ReactNativeFirebase } from '@react-native-firebase/app';
+import { ReactNativeFirebase } from '@minding/react-native-firebase-app';
 
 /**
  * Firebase Cloud Firestore package for React Native.
@@ -23,7 +23,7 @@ import { ReactNativeFirebase } from '@react-native-firebase/app';
  * #### Example: Access the firebase export from the `firestore` package:
  *
  * ```js
- * import { firebase } from '@react-native-firebase/firestore';
+ * import { firebase } from '@minding/react-native-firebase-firestore';
  *
  * // firebase.firestore().X
  * ```
@@ -31,7 +31,7 @@ import { ReactNativeFirebase } from '@react-native-firebase/app';
  * #### Example: Using the default export from the `firestore` package:
  *
  * ```js
- * import firestore from '@react-native-firebase/firestore';
+ * import firestore from '@minding/react-native-firebase-firestore';
  *
  * // firestore().X
  * ```
@@ -39,7 +39,7 @@ import { ReactNativeFirebase } from '@react-native-firebase/app';
  * #### Example: Using the default export from the `app` package:
  *
  * ```js
- * import firebase from '@react-native-firebase/app';
+ * import firebase from '@minding/react-native-firebase-app';
  * import '@react-native-firebase/firestore';
  *
  * // firebase.firestore().X
@@ -2064,7 +2064,7 @@ export default defaultExport;
 /**
  * Attach namespace to `firebase.` and `FirebaseApp.`.
  */
-declare module '@react-native-firebase/app' {
+declare module '@minding/react-native-firebase-app' {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   namespace ReactNativeFirebase {
     import FirebaseModuleWithStaticsAndApp = ReactNativeFirebase.FirebaseModuleWithStaticsAndApp;

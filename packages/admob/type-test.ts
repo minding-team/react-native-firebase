@@ -1,5 +1,5 @@
-import firebase from '@react-native-firebase/app';
-import * as admob from '@react-native-firebase/admob';
+import firebase from '@minding/react-native-firebase-app';
+import * as admob from '@minding/react-native-firebase-admob';
 
 console.log(firebase.admob.AdsConsentDebugGeography.DISABLED);
 console.log(firebase.admob.AdsConsentDebugGeography.EEA);

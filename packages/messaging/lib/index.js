@@ -24,12 +24,12 @@ import {
   isObject,
   isString,
   isUndefined,
-} from '@react-native-firebase/app/lib/common';
+} from '@minding/react-native-firebase-app/lib/common';
 import {
   createModuleNamespace,
   FirebaseModule,
   getFirebaseRoot,
-} from '@react-native-firebase/app/lib/internal';
+} from '@minding/react-native-firebase-app/lib/internal';
 import { AppRegistry } from 'react-native';
 import remoteMessageOptions from './remoteMessageOptions';
 import version from './version';
@@ -388,10 +388,10 @@ class FirebaseMessagingModule extends FirebaseModule {
   }
 }
 
-// import { SDK_VERSION } from '@react-native-firebase/messaging';
+// import { SDK_VERSION } from '@minding/react-native-firebase-messaging';
 export const SDK_VERSION = version;
 
-// import messaging from '@react-native-firebase/messaging';
+// import messaging from '@minding/react-native-firebase-messaging';
 // messaging().X(...);
 export default createModuleNamespace({
   statics,
@@ -412,7 +412,7 @@ export default createModuleNamespace({
   ModuleClass: FirebaseMessagingModule,
 });
 
-// import messaging, { firebase } from '@react-native-firebase/messaging';
+// import messaging, { firebase } from '@minding/react-native-firebase-messaging';
 // messaging().X(...);
 // firebase.messaging().X(...);
 export const firebase = getFirebaseRoot();

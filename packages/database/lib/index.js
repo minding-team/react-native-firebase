@@ -15,12 +15,12 @@
  *
  */
 
-import { isBoolean, isNumber, isString } from '@react-native-firebase/app/lib/common';
+import { isBoolean, isNumber, isString } from '@minding/react-native-firebase-app/lib/common';
 import {
   createModuleNamespace,
   FirebaseModule,
   getFirebaseRoot,
-} from '@react-native-firebase/app/lib/internal';
+} from '@minding/react-native-firebase-app/lib/internal';
 import DatabaseReference from './DatabaseReference';
 import DatabaseStatics from './DatabaseStatics';
 import DatabaseTransaction from './DatabaseTransaction';
@@ -182,10 +182,10 @@ class FirebaseDatabaseModule extends FirebaseModule {
   }
 }
 
-// import { SDK_VERSION } from '@react-native-firebase/database';
+// import { SDK_VERSION } from '@minding/react-native-firebase-database';
 export const SDK_VERSION = version;
 
-// import database from '@react-native-firebase/database';
+// import database from '@minding/react-native-firebase-database';
 // database().X(...);
 export default createModuleNamespace({
   statics: DatabaseStatics,
@@ -198,7 +198,7 @@ export default createModuleNamespace({
   ModuleClass: FirebaseDatabaseModule,
 });
 
-// import database, { firebase } from '@react-native-firebase/database';
+// import database, { firebase } from '@minding/react-native-firebase-database';
 // database().X(...);
 // firebase.database().X(...);
 export const firebase = getFirebaseRoot();

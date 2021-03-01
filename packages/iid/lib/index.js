@@ -19,7 +19,7 @@ import {
   createModuleNamespace,
   FirebaseModule,
   getFirebaseRoot,
-} from '@react-native-firebase/app/lib/internal';
+} from '@minding/react-native-firebase-app/lib/internal';
 import version from './version';
 
 const statics = {};
@@ -52,10 +52,10 @@ class FirebaseIidModule extends FirebaseModule {
   }
 }
 
-// import { SDK_VERSION } from '@react-native-firebase/iid';
+// import { SDK_VERSION } from '@minding/react-native-firebase-iid';
 export const SDK_VERSION = version;
 
-// import iid from '@react-native-firebase/iid';
+// import iid from '@minding/react-native-firebase-iid';
 // iid().get();
 export default createModuleNamespace({
   statics,
@@ -68,7 +68,7 @@ export default createModuleNamespace({
   ModuleClass: FirebaseIidModule,
 });
 
-// import iid, { firebase } from '@react-native-firebase/iid';
+// import iid, { firebase } from '@minding/react-native-firebase-iid';
 // iid().get();
 // firebase.iid().get();
 export const firebase = getFirebaseRoot();
