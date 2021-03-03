@@ -23,6 +23,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.ThreadPoolExecutor;
 
 import javax.annotation.OverridingMethodsMustInvokeSuper;
 
@@ -46,7 +47,36 @@ public class UniversalFirebaseModule {
   }
 
   protected ExecutorService getExecutor() {
-    return Executors.newCachedThreadPool();
+    return getExecutor(false);
+  }
+
+  protected ExecutorService getTransactionalExecutor() {
+    return getExecutor(true);
+  }
+
+  private ExecutorService getExecutor(Boolean isTransactional) {
+    String executorName = getExecutorName(isTransactional);
+    ExecutorService existingExecutor = executors.get(executorName);
+    if (existingExecutor != null) return existingExecutor;
+    ExecutorService newExecutor = getNewExecutor(isTransactional);
+    executors.put(getName(), newExecutor);
+    return newExecutor;
+  }
+
+  private ExecutorService getNewExecutor(Boolean isTransactional) {
+    if (isTransactional == true) {
+      return new ThreadPoolExecutor(0, 1, 60L, TimeUnit.SECONDS, new LinkedBlockingQueue<Runnable>());
+    } else {
+      return new ThreadPoolExecutor(0, Integer.MAX_VALUE, 60L, TimeUnit.SECONDS, new SynchronousQueue<Runnable>());
+    }
+  }
+
+  private String getExecutorName(Boolean isTransactional) {
+    String moduleName = getName();
+    if (isTransactional == true) {
+      return moduleName + "TransactionalExecutor";
+    }
+    return moduleName + "Executor";
   }
 
   public String getName() {
@@ -55,10 +85,18 @@ public class UniversalFirebaseModule {
 
   @OverridingMethodsMustInvokeSuper
   public void onTearDown() {
-    ExecutorService existingSingleThreadExecutor = executors.get(getName());
+    String singleThreadExecutorName = getExecutorName(false);
+    ExecutorService existingSingleThreadExecutor = executors.get(singleThreadExecutorName);
     if (existingSingleThreadExecutor != null) {
       existingSingleThreadExecutor.shutdownNow();
-      executors.remove(getName());
+      executors.remove(singleThreadExecutorName);
+    }
+
+    String threadPoolExecutorName = getExecutorName(false);
+    ExecutorService existingThreadPoolExecutor = executors.get(threadPoolExecutorName);
+    if (existingThreadPoolExecutor != null) {
+      existingThreadPoolExecutor.shutdownNow();
+      executors.remove(threadPoolExecutorName);
     }
   }
 
