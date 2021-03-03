@@ -46,12 +46,15 @@ public class UniversalFirebaseModule {
     return getContext().getApplicationContext();
   }
 
-  // TODO: remove this
   protected ExecutorService getExecutor() {
     return getExecutor(false);
   }
 
-  protected ExecutorService getExecutor(Boolean isTransactional) {
+  protected ExecutorService getTransactionalExecutor() {
+    return getExecutor(true);
+  }
+
+  private ExecutorService getExecutor(Boolean isTransactional) {
     String executorName = getExecutorName(isTransactional);
     ExecutorService existingExecutor = executors.get(executorName);
     if (existingExecutor != null) return existingExecutor;

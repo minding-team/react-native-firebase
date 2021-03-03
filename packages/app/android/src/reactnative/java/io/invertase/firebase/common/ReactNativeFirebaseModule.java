@@ -74,12 +74,15 @@ public class ReactNativeFirebaseModule extends ReactContextBaseJavaModule implem
     return getReactApplicationContext();
   }
 
-  // TODO: remove this
   public ExecutorService getExecutor() {
     return getExecutor(false);
   }
 
-  public ExecutorService getExecutor(Boolean isTransactional) {
+  public ExecutorService getTransactionalExecutor() {
+    return getExecutor(true);
+  }
+
+  private ExecutorService getExecutor(Boolean isTransactional) {
     String executorName = getExecutorName(isTransactional);
     ExecutorService existingExecutor = executors.get(executorName);
     if (existingExecutor != null) return existingExecutor;
